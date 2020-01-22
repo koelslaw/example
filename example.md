@@ -105,9 +105,9 @@ Most jobs are controlled by task scheduler on windows and happen off-peak hours.
     ```
 
 
-- C:\Python27\ArcDropScripts\*COOP*\*COOP*Subscriber.py
+- C:\Python27\ArcDropScripts\\Subscriber.py
 
-    This is a nightly MySQL query to bring the drop website (CUSTOMERportal.com) data into the mapping so it can be published on the web service. Other data can be added to the sde if you wish.
+    This is a nightly MySQL query to bring the drop website data into the mapping so it can be published on the web service. Other data can be added to the sde if you wish.
 
 
     ```
@@ -145,7 +145,7 @@ Most jobs are controlled by task scheduler on windows and happen off-peak hours.
 
 
     print "Running Table to Geodatabase tool to ingest temp CSV..."
-    arcpy.env.workspace = gibson_sde
+    arcpy.env.workspace = coop_sde
     fc = "coop.DBO.Subscribers..."
     if arcpy.Exists(fc):
         print "Updating Table..."
